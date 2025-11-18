@@ -27,7 +27,7 @@ import {
   Transaction,
   Client,
   PaymentMethod,
-  Xendit,
+  PaymentGateway,
   Payout,
   SellerBankAccount,
   PayoutDetails,
@@ -36,7 +36,7 @@ import {
   StatusHistory,
   Company,
   Metadata,
-  XenditPaymentMethod,
+  PaymentGatewayMethod,
   Booking,
   ProjectCompliance
 } from 'oh-db-models';
@@ -50,7 +50,7 @@ import {
     ```
 *   **Payment Types:**
     ```typescript
-    import { XenditPaymentMethod, Xendit, Fees } from 'oh-db-models/payments';
+    import { PaymentGatewayMethod, PaymentGateway, Fees } from 'oh-db-models/payments';
     ```
 *   **Client Types:**
     ```typescript
@@ -92,8 +92,8 @@ const transaction: Transaction = {
     channel: 'OVO',
     channelProperties: {}
   },
-  xendit: { // Assuming Xendit is imported from 'oh-db-models/payments' if needed
-    paymentId: 'xendit_payment_123',
+  paymentGateway: { // Assuming PaymentGateway is imported from 'oh-db-models/payments' if needed
+    paymentId: 'gateway_payment_123',
     externalId: 'ext_123',
     status: 'PENDING',
     created: new Date(),
@@ -166,7 +166,7 @@ const transaction: Transaction = {
   ],
   fees: { // Assuming Fees is imported from 'oh-db-models/payments'
     platformFee: 0,
-    xenditFee: 0,
+    gatewayFee: 0,
     totalFee: 0,
     netAmount: 100000
   },
@@ -275,7 +275,7 @@ const payout: Payout = {
 The data models are now organized into feature-based modules:
 
 *   **Shared**: Contains common interfaces like `PaymentMethod`, `StatusHistory`, `Company`, and `Metadata` that are used across multiple domains.
-*   **Payments**: Includes interfaces related to payment processing, suchs as `XenditPaymentMethod`, `Xendit`, and `Fees`.
+*   **Payments**: Includes interfaces related to payment processing, such as `PaymentGatewayMethod`, `PaymentGateway`, and `Fees`.
 *   **Clients**: Defines the `Client` interface for customer information.
 *   **Transactions**: Contains `Item` and `Transaction` interfaces for managing transaction details.
 *   **Payouts**: Includes interfaces for disbursing payments, such as `SellerBankAccount`, `PayoutDetails`, and `Payout`.

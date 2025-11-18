@@ -1,47 +1,47 @@
 import { PaymentMethod } from '../shared/types';
 
 /**
- * Represents a Xendit-specific payment method.
+ * Represents a payment gateway-specific payment method.
  */
-export interface XenditPaymentMethod {
+export interface PaymentGatewayMethod {
   /** The type of payment method (e.g., 'EWALLET', 'BANK_TRANSFER'). */
   type: string;
-  /** The specific channel code used by Xendit (e.g., 'ID_OVO', 'BCA'). */
+  /** The specific channel code used by the payment gateway (e.g., 'ID_OVO', 'BCA'). */
   channel_code: string;
-  /** Additional properties specific to the Xendit payment channel. */
+  /** Additional properties specific to the payment gateway channel. */
   channel_properties: Record<string, any>;
 }
 
 /**
- * Represents a Xendit payment transaction.
+ * Represents a payment gateway transaction.
  */
-export interface Xendit {
-  /** Unique identifier for the payment from Xendit. */
+export interface PaymentGateway {
+  /** Unique identifier for the payment from the gateway. */
   paymentId: string;
   /** External ID provided by the merchant for the payment. */
   externalId: string;
-  /** Current status of the Xendit payment. */
+  /** Current status of the payment. */
   status: string;
-  /** Date and time when the payment was created in Xendit. */
+  /** Date and time when the payment was created. */
   created: Date;
-  /** Date and time when the payment was last updated in Xendit. */
+  /** Date and time when the payment was last updated. */
   updated: Date;
-  /** Details of the payment method used for the Xendit transaction. */
-  paymentMethod: XenditPaymentMethod;
-  /** Raw responses from Xendit API calls. */
+  /** Details of the payment method used for the transaction. */
+  paymentMethod: PaymentGatewayMethod;
+  /** Raw responses from payment gateway API calls. */
   response: {
-    /** Initial response from Xendit when the payment was created. */
+    /** Initial response when the payment was created. */
     initial: Record<string, any>;
-    /** Callback response from Xendit (e.g., webhook data). */
+    /** Callback response (e.g., webhook data). */
     callback: Record<string, any>;
     /** Error details if the payment failed. */
     error: any;
   };
-  /** Indicates if a webhook notification has been received from Xendit. */
+  /** Indicates if a webhook notification has been received. */
   webhookReceived: boolean;
-  /** Timestamp of the last webhook received from Xendit. */
+  /** Timestamp of the last webhook received. */
   webhookTimestamp: Date | null;
-  /** URL for the Xendit checkout page. */
+  /** URL for the checkout page. */
   checkoutUrl: string;
   /** QR code string for payments that support it. */
   qrCode: string;
@@ -55,8 +55,8 @@ export interface Xendit {
 export interface Fees {
   /** Fee charged by the platform. */
   platformFee: number;
-  /** Fee charged by Xendit. */
-  xenditFee: number;
+  /** Fee charged by the payment gateway. */
+  gatewayFee: number;
   /** Total sum of all fees. */
   totalFee: number;
   /** The amount remaining after all fees have been deducted. */
