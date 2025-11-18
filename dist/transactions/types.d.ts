@@ -34,6 +34,8 @@ export interface Transaction {
     companyId: string;
     /** ID of the booking associated with this transaction. */
     bookingId?: string;
+    /** ID of airing code associated with this transaction */
+    airingCode?: string;
     /** ID of the reservation associated with this transaction. */
     reservationId?: string;
     /** Date and time when the transaction was created. */

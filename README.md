@@ -74,6 +74,7 @@ import { PaymentMethod } from 'oh-db-models/shared';
 const transaction: Transaction = {
   id: 'txn_123',
   userId: 'user_456',
+  airingCode: 'AIR123',
   companyId: 'company_789',
   createdAt: new Date(),
   updatedAt: new Date(),
