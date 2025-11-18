@@ -32,6 +32,15 @@ export interface Booking {
         vatAmount: number;
         vatRate: number;
     };
+    tax?: {
+        percentage: number;
+        taxAmount: number;
+    };
+    discount?: {
+        percentage?: number;
+        amount?: number;
+        discountTotal: number;
+    };
     created: any;
     end_date: Timestamp | null;
     media_order?: string[];
