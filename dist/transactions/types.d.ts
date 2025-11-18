@@ -1,5 +1,5 @@
 import { PaymentMethod, StatusHistory, Company, Metadata } from '../shared/types';
-import { Xendit, Fees } from '../payments/types';
+import { PaymentGateway, Fees } from '../payments/types';
 import { Client } from '../clients/types';
 /**
  * Represents an item within a transaction.
@@ -50,8 +50,8 @@ export interface Transaction {
     merchantName: string;
     /** Details of the payment method used. */
     paymentMethod: PaymentMethod;
-    /** Xendit-specific payment details. */
-    xendit: Xendit;
+    /** Payment gateway-specific payment details. */
+    paymentGateway: PaymentGateway;
     /** Client information for the transaction. */
     client: Client;
     /** List of items included in the transaction. */
