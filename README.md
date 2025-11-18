@@ -36,7 +36,9 @@ import {
   StatusHistory,
   Company,
   Metadata,
-  XenditPaymentMethod
+  XenditPaymentMethod,
+  Booking,
+  ProjectCompliance
 } from 'oh-db-models';
 ```
 
@@ -61,6 +63,10 @@ import {
 *   **Payout Types:**
     ```typescript
     import { SellerBankAccount, PayoutDetails, Payout } from 'oh-db-models/payouts';
+    ```
+*   **Booking Types:**
+    ```typescript
+    import { Booking, ProjectCompliance } from 'oh-db-models/bookings';
     ```
 
 ### Example Usage
@@ -273,6 +279,7 @@ The data models are now organized into feature-based modules:
 *   **Clients**: Defines the `Client` interface for customer information.
 *   **Transactions**: Contains `Item` and `Transaction` interfaces for managing transaction details.
 *   **Payouts**: Includes interfaces for disbursing payments, such as `SellerBankAccount`, `PayoutDetails`, and `Payout`.
+*   **Bookings**: Includes interfaces for booking management, such as `Booking` and `ProjectCompliance`.
 
 ## Development
 
