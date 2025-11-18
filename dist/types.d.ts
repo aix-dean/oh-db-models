@@ -128,7 +128,7 @@ export interface Transaction {
     company: Company;
     metadata: Metadata;
 }
-//# sourceMappingURL=types.d.ts.mapexport interface PaymentMethod {
+export interface PaymentMethod {
     type: string;
     channel: string;
     channelProperties: Record<string, any>;
