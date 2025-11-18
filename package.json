@@ -1,0 +1,27 @@
+{
+  "name": "oh-db-models",
+  "version": "1.0.0",
+  "description": "Database models for Firestore, providing TypeScript interfaces for reusable data structures in Next.js projects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "firestore",
+    "database",
+    "models",
+    "typescript",
+    "nextjs"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
