@@ -3,4 +3,5 @@ export { XenditPaymentMethod, Xendit, Fees } from './payments/types';
 export { Client } from './clients/types';
 export { Item, Transaction } from './transactions/types';
 export { SellerBankAccount, PayoutDetails, Payout } from './payouts/types';
+export { Booking, ProjectCompliance } from './bookings/types';
 //# sourceMappingURL=index.d.ts.map
