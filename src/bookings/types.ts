@@ -1,4 +1,5 @@
 import { Timestamp } from 'firebase/firestore';
+import {Product} from '../products/types';
 
 /**
  * Represents project compliance details.
@@ -78,7 +79,7 @@ export interface Booking {
   quotation_id: string;
   quotation_number?: string;
   isCollectibles?: boolean;
-  items?: any;
+  items?: Product;
   url?: string;
   for_screening?: number;
   airing_code?: string;
