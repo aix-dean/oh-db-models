@@ -1,4 +1,6 @@
 import { Timestamp } from 'firebase/firestore';
+import { Product } from '../products/types';
+import { Transaction } from '../transactions/types';
 /**
  * Represents project compliance details.
  */
@@ -65,7 +67,7 @@ export interface Booking {
     }[];
     reservation_id: string;
     seller_id: string;
-    spot_numbers?: number[];
+    spot_numbers?: number;
     start_date: Timestamp | null;
     status: string;
     total_cost: number;
@@ -75,9 +77,11 @@ export interface Booking {
     quotation_id: string;
     quotation_number?: string;
     isCollectibles?: boolean;
-    items?: any;
+    items?: Product;
     url?: string;
+    for_censorship?: number;
     for_screening?: number;
     airing_code?: string;
+    transaction?: Transaction;
 }
 //# sourceMappingURL=types.d.ts.map

@@ -1,4 +1,4 @@
-import { Timestamp, Geopoint } from 'firebase/firestore';
+import { Timestamp, GeoPoint } from 'firebase/firestore';
 
 /**
  * Represents a product.
@@ -39,7 +39,7 @@ export interface Product {
         land_owner: string
         orientation: string
         facing_direction: string
-        geopoint: Geopoint
+        geopoint: GeoPoint
         location: string
         location_label: string
         location_visibility: number
