@@ -25,5 +25,7 @@ export interface Media {
     uploadedBy: string;
     /** Date when the media file was last modified. */
     modifiedDate: Timestamp;
+    deleted: boolean;
+    dateDeleted: Timestamp;
 }
 //# sourceMappingURL=types.d.ts.map
