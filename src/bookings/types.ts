@@ -1,5 +1,6 @@
 import { Timestamp } from 'firebase/firestore';
 import {Product} from '../products/types';
+import { Transaction } from '../transactions/types';
 
 /**
  * Represents project compliance details.
@@ -84,4 +85,5 @@ export interface Booking {
   for_censorship?: number;
   for_screening?: number;
   airing_code?: string;
+  transaction?: Transaction;
 }
