@@ -38,7 +38,8 @@ import {
   Metadata,
   PaymentGatewayMethod,
   Booking,
-  ProjectCompliance
+  ProjectCompliance,
+  Media
 } from 'oh-db-models';
 ```
 
@@ -67,6 +68,10 @@ import {
 *   **Booking Types:**
     ```typescript
     import { Booking, ProjectCompliance } from 'oh-db-models/bookings';
+    ```
+*   **Media Types:**
+    ```typescript
+    import { Media } from 'oh-db-models/media';
     ```
 
 ### Example Usage
@@ -280,6 +285,7 @@ The data models are now organized into feature-based modules:
 *   **Transactions**: Contains `Item` and `Transaction` interfaces for managing transaction details.
 *   **Payouts**: Includes interfaces for disbursing payments, such as `SellerBankAccount`, `PayoutDetails`, and `Payout`.
 *   **Bookings**: Includes interfaces for booking management, such as `Booking` and `ProjectCompliance`.
+*   **Media**: Includes the `Media` interface for managing media files in a library, similar to Google Drive.
 
 ## Development
 

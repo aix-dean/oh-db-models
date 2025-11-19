@@ -4,3 +4,4 @@ export { Client } from './clients/types';
 export { Transaction } from './transactions/types';
 export { SellerBankAccount, PayoutDetails, Payout } from './payouts/types';
 export { Booking, ProjectCompliance } from './bookings/types';
+export { Media } from './media/types';
