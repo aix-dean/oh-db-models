@@ -46,6 +46,9 @@ export interface Booking {
     amount?: number;
     discountTotal: number;
   };
+  channel: {
+    name: string;
+  }
   created: any; // Firestore timestamp
   end_date: Timestamp | null;
   media_order?: string[];
