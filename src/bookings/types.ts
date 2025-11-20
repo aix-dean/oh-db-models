@@ -70,7 +70,7 @@ export interface Booking {
   }[];
   reservation_id: string;
   seller_id: string;
-  spot_numbers?: number;
+  spot_number?: number;
   start_date: Timestamp | null;
   status: string;
   total_cost: number;
@@ -85,5 +85,8 @@ export interface Booking {
   for_censorship?: number;
   for_screening?: number;
   airing_code?: string;
+  channel?: {
+    name: string;
+  };
   transaction?: Transaction;
 }
