@@ -22,7 +22,7 @@ export interface Product {
     seller_name: string;
     seller_id: string;
     status: string;
-    playerSns: string[];
+    playerSns: string;
     playerIds: string[];
     description: string;
     company_id: string;
@@ -88,6 +88,6 @@ export interface Product {
     };
     retail_spot: {
         spot_number: number[];
-    }[];
+    };
 }
 //# sourceMappingURL=types.d.ts.map
