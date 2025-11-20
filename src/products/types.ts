@@ -28,7 +28,7 @@ export interface Product {
     cms: {
         end_time: string
         start_time: string
-        loop_per_day: number
+        loops_per_day: number
         spot_duration: number
         serial_number: string
         triggers: {manual: boolean; auto: boolean; occupancy_percentage:number}
