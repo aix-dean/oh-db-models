@@ -12,7 +12,7 @@ export interface Product {
     categories: string[];
     active: boolean;
     deleted: boolean;
-    media: any[];
+    media: { distance: string; isVideo: boolean; type: string; url: string; description: string}[];
     created: Timestamp;
     rating: number;
     seller_name: string;
@@ -24,11 +24,14 @@ export interface Product {
     company_id: string
     content_type: string
     position: number
+    enable_special_rate: boolean
     cms: {
         end_time: string
         start_time: string
         loop_per_day: number
         spot_duration: number
+        serial_number: string
+        triggers: {manual: boolean; auto: boolean; occupancy_percentage:number}
     }
     specs_rental: {
         resolution: {
@@ -36,6 +39,8 @@ export interface Product {
             height: number;
         };
         audience_type: string[]
+        audience_profile: string[]
+        brightness: string
         land_owner: string
         orientation: string
         facing_direction: string
@@ -43,13 +48,15 @@ export interface Product {
         location: string
         location_label: string
         location_visibility: number
-        location_visibolity_unit: string
+        location_visibility_unit: string
+        viewability_distance:string
         partner: string
         traffic_count: number
         elevation: number
         dimension_unit: string
         width: number
         height: number
+        notable_campaigns: {image_url: string; caption: string; uploaded_date: Timestamp }[]
         illumination: {
             bottom_count: number
             upper_count: number
